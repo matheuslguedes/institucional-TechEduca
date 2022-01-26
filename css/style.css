@@ -271,6 +271,11 @@ body{
 .fa-star{
     color: var(--clr-secundary);
 }
+@media screen and (max-width: 450px) {
+    #course{
+        padding: 1.5rem 2rem;
+    }
+}
 /*05.REGISTRATION****************************/
 #registration{
     padding: 5vw 8vw;
@@ -345,6 +350,16 @@ body{
     }
     .reminder{
         text-align: center;
+    }
+}
+@media screen and (max-width: 450px){
+    .timer{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+    .date{
+        flex: 1;
     }
 }
 /*05.EXPERTS****************************/
