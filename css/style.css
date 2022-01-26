@@ -21,6 +21,7 @@ body{
 :root{
     --clr-primary: rgb(21, 21, 100);
     --clr-secundary: #FDC93B;
+    --clr-navbar: rgba(17, 20, 104, 0.45);
     --clr-white: #fff;
     --clr-card: #ececfd;
     --clr-card-icon: rgb(44, 44, 80);
@@ -64,6 +65,7 @@ body{
 .navbar{
     display: flex;
     gap: 3rem;
+    transition: var(--transition);
 }
 .navbar__link{
     font-size: 1.6rem;
@@ -73,6 +75,57 @@ body{
 }
 .navbar__link:hover{
     color: var(--clr-secundary);
+}
+.menu-hamburguer{
+    display: none;
+}
+.fa-bars, .fa-times{
+    font-size: 1.6rem;
+    color: var(--clr-primary);
+    transition: var(--transition);
+}
+
+@media screen and (max-width: 769px) {
+    #nav{
+      padding: 1.5rem 2rem;
+    }   
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 20rem;
+        height: 100vh;
+        background-color: var(--clr-navbar);
+        display: none;
+        transition: var(--transition);
+        backdrop-filter: blur(.6rem);
+    }
+    .navbar__link{
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: var(--clr-white);
+    }
+    .navbar__link:first-child{
+        margin-top: 4rem;
+    }
+    .shownavbar{
+        display: flex;
+    }
+    
+    .menu-hamburguer{
+        display: flex;
+        cursor: pointer;
+        transition: var(--transition);
+        z-index: 99;
+    }
+    .menu-hamburguer .fa-bars:hover{
+        transform: translate(1.1);
+        color: var(--clr-secundary);
+    }
 }
 
 /****************************************/
@@ -152,7 +205,19 @@ body{
     font-size: 1rem;
     color: var(--clr-card-description);
 }
-/*04.FEATURES****************************/
+@media screen and (max-width: 769px){
+    #features{
+        padding: 1.5rem 2rem;
+    }
+    .features-cards{
+        flex-wrap: wrap;
+    }
+    .features-card{
+        width: 100%;
+        text-align: center;
+    }
+}
+/*04.COURSES****************************/
 #courses{
     padding: 5vw 8vw;
     text-align: center;
@@ -271,6 +336,17 @@ body{
     color: var(--clr-form-placeholder);
     font-size: 1.4rem;
 }
+@media screen and (max-width: 769px) {
+    #registration{
+        padding: 1.5rem 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .8rem;
+    }
+    .reminder{
+        text-align: center;
+    }
+}
 /*05.EXPERTS****************************/
 #experts{
     padding: 5vw 8vw;
@@ -300,6 +376,19 @@ body{
     margin-right: .8rem;
     border: 1px solid var(--clr-form-placeholder);
     padding: .4rem;
+}
+@media screen and (max-width: 769px){
+    #experts{
+        padding: 1.5rem 2rem;
+    }
+    .experts-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .8rem;
+    }
+    .expert{
+        width: 30rem;
+    }
 }
 /*05.FOOTER****************************/
 #footer{
@@ -379,4 +468,14 @@ body{
 .footer__icons .fab:hover{
     background-color: var(--clr-secundary);
     color: var(--clr-white);
+}
+@media screen and (max-width: 769px){
+    #footer{
+        padding: 1.5rem 2rem;
+        justify-content: center;
+    }
+    .footer-col{
+        width: 30rem;
+        text-align: center;
+    }
 }
