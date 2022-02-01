@@ -396,6 +396,9 @@ body{
     padding: .8rem;
     border-radius: .4rem;
 }
+.expert img{
+    background: transparent;
+}
 .expert__name{
     font-size: 1.6rem;
 }
@@ -518,11 +521,20 @@ body{
         justify-content: center;
         gap: .8rem;
     }
+
 }
+@media screen and (max-width: 300px){
+    .footer-col__subscribe{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .8rem;
+    }
+}
+
 /****************************************/
 /*06. ABOUT****************************/
 /****************************************/
-#about-home{
+#hero{
     background-image: linear-gradient(rgba(9, 5, 54, 0.3 ), rgba(5, 4, 46, 0.7)), 
     url('../images/back1.jpg');
     height: 60vh;
@@ -594,7 +606,6 @@ body{
     }
     
 }
-
 /*07.Trust****************************/
 #trust{
     text-align: center;
@@ -620,5 +631,96 @@ body{
 @media screen and (max-width: 300px){
     .trust-img__img{
         width: 3rem;
+    }
+}
+/****************************************/
+/*08. BLOG****************************/
+/****************************************/
+#blog-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 3.2rem;
+    padding: 2vw 8vw;
+}
+.blogs{
+    width: 60%;
+}
+.post{
+    width: 100%;
+    margin: 1.6rem 0;
+}
+.categories{
+    width: 30%;
+}
+.post__img{
+    width: 100%;
+    border-radius: .4rem;
+}
+.post__title{
+    font-size: 1.6rem;
+    color: var(--clr-about-text-title);
+}
+.post__description{
+    width: 80%;
+    color: var(--clr-about-text-description);
+    margin: 1.6rem 0;
+}
+.post__btn{
+    padding: .8rem 2.4rem;
+    color: var(--clr-white);
+    background-color: rgb(21, 21, 100);
+    border-radius: .4rem;
+    font-weight: 600;
+    margin: 1.6rem 0;
+    text-transform: uppercase;
+}
+.categories__title{
+    text-transform: capitalize;
+    font-size: 1.8rem;
+}
+.category{
+    font-size: 1.4rem;
+    line-height: 4.5rem;
+    color: var(--clr-about-text-description);
+}
+@media screen and (max-width: 769px){
+    #blog-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.6rem;
+    }
+    .blogs{
+        width: 100%;
+    }
+    .categories{
+        width: 80%;
+        margin: .8rem 0;
+    }
+}
+/****************************************/
+/*08. POST PAGE****************************/
+/****************************************/
+#blog-container-post-page{
+    width: 100%;
+}
+.blogs-post-page{
+    width: 80%;
+    height: 100%;
+    margin:0 auto;
+    padding: 5rem;
+}
+.post__full-title{
+    font-size: 3.2rem;
+    margin: 1.6rem 0;
+}
+.post__text{
+    font-size: 1.6rem;
+    color: var(--clr-about-text-description);
+    margin: 1.6rem 0;
+}
+@media screen and (max-width: 450px) {
+    .blogs-post-page{
+        width: 100%;
+        padding: 2rem;
     }
 }
